@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  screen-recorder:
+    build: .
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    container_name: screen-recorder
+    
